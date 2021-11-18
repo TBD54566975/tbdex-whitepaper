@@ -1,0 +1,156 @@
+
+:root {
+  --tbd-yellow: #ffef05;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #fff;
+  background: #1c2126;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  margin: 1em auto 3em;
+  padding: 1em;
+  overflow-y: hidden;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 3em;
+  padding: 0em 0.25em;
+  color: #000;
+  background: var(--tbd-yellow);
+  border: 0.15em solid #000;
+}
+
+button[styled] {
+  padding: 0.15em 0.25em;
+  border: 3px solid #000;
+  background: var(--tbd-yellow);
+  font-size: 1.2em;
+  font-weight: bold;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.papers {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  margin: 0 auto;
+  max-width: 550px;
+  min-height: 300px;
+  padding: 24px;
+  position: relative;
+  width: 80%;
+  /* transition: transform 0.3s ease;
+  will-change: transform; */
+}
+
+.papers:before, .papers:after {
+  content: "";
+  height: 98%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+.papers:before {
+  background: #fafafa;
+  box-shadow: 0 0 8px rgba(0,0,0,1);
+  left: -5px;
+  top: 5px;
+  transform: rotate(-2.2deg);
+}
+.papers:after {
+  background: #f6f6f6;
+  box-shadow: 0 0 3px rgba(0,0,0,1);
+  right: -3px;
+  top: 0;
+  transform: rotate(2deg);
+}
+
+/* .papers[animate]:hover {
+  transform: scale(102%);
+} */
+
+.papers[animate]:hover:before {
+  transform: rotate(-5deg);
+}
+
+.papers[animate]:hover:after {
+  transform: rotate(4deg);
+}
+
+#intro {
+  flex: 1;
+  text-align: center;
+}
+
+#paper {
+  margin-bottom: 1.5em;
+  padding: 2em;
+  overflow: hidden;
+}
+
+#paper .papers {
+  display: flex;
+  max-width: 225px;
+  max-height: 25vh;
+  min-height: auto;
+  aspect-ratio: 8.5/11;
+  text-decoration: none;
+}
+
+/* #paper p {
+  position: absolute;
+  height: 100%;
+  padding: 1em;
+  color: #000;
+} */
+
+#paper button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  transform: translate(-50%, -50%);
+}
+
+#discuss {
+  text-align: center;
+}
+
+#discuss a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  color: var(--tbd-yellow);
+}
+
+#discuss svg {
+  margin: 0.15em auto 0.15em;
+  font-size: 7em;
+  fill: var(--tbd-yellow);
+  will-change: transform;
+  transition: transform 0.3s ease;
+}
+
+#discuss a:hover svg {
+  transform: scale(1.1);
+}
+
+
+#discuss button {
+  flex: 0;
+}
