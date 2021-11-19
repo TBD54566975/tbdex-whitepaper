@@ -22,7 +22,7 @@ main {
   display: flex;
   flex-direction: column;
   max-width: 450px;
-  margin: 3em auto 10em;
+  margin: 3em auto 4em;
   padding: 1em;
   overflow-y: hidden;
 }
