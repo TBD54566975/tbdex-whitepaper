@@ -1,5 +1,8 @@
 
 :root {
+  --body-background: #1c2126;
+  --header-height: 3.85em;
+  --header-shift: 0.75em;
   --tbd-yellow: #ffef05;
 }
 
@@ -9,8 +12,9 @@ html, body {
 }
 
 body {
+  padding-top: 3em;
   color: #fff;
-  background: #1c2126;
+  background: var(--body-background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -18,7 +22,7 @@ main {
   display: flex;
   flex-direction: column;
   max-width: 450px;
-  margin: 1em auto 3em;
+  margin: 3em auto 10em;
   padding: 1em;
   overflow-y: hidden;
 }
@@ -40,6 +44,22 @@ button[styled] {
   font-weight: bold;
   white-space: nowrap;
   cursor: pointer;
+}
+
+[flex~="left"] {
+  margin-left: auto;
+}
+
+.logo-text {
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 0.1em 0.3em 0.075em;
+  color: #000;
+  background: var(--tbd-yellow);
+}
+
+.twitter-link {
+  color: var(--tbd-yellow);
 }
 
 .papers {
@@ -90,6 +110,56 @@ button[styled] {
 .papers[animate]:hover:after {
   transform: rotate(4deg);
 }
+
+#header {
+  display: flex;
+  contain: size;
+  position: fixed;
+  top: 0;
+  align-items: center;
+  height: var(--header-height);
+  width: 100%;
+  padding: var(--header-shift) 0 0;
+  color: #fff;
+  transition: transform 0.3s ease;
+  z-index: 100;
+}
+
+  body[scrolled] #header {
+    transform: translateY(calc(var(--header-shift) * -1));
+  }
+
+#header nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+#header nav > * {
+  z-index: 1;
+}
+
+  #header nav:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-bottom: 1pxsolid rgba(255,255,255,.05);
+    box-shadow: 0 1px 6px 2px rgb(0 0 0 / 25%);
+    background: var(--body-background);
+    opacity: 0;
+    transition: opacity .25s;
+  }
+
+  body[scrolled] #header nav:before {
+    opacity: 1;
+  }
 
 #intro {
   flex: 1;
