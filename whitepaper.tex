@@ -32,7 +32,7 @@
 
 
 \vspace{2\baselineskip}
-\textbf{Abstract}. \textit{tbDEX} is a protocol for discovering liquidity and exchanging assets (such as bitcoin, fiat money, or real world goods)\textcolor[HTML]{202124}{ }when the existence of \textit{social trust} is an intractable element of managing transaction risk. The \textit{tbDEX} protocol facilitates decentralized networks of exchange between assets by providing a framework for establishing social trust, utilizing \textit{decentralized identity} (DID) and \textit{verifiable credentials }(VCs) to establish the provenance of identity in the real world. The protocol has no opinion on anonymity as a feature or consequence of transactions. Instead, it allows willing counterparties to negotiate and establish the minimum information acceptable for the exchange. Moreover, it provides the infrastructure necessary to create a ubiquity of on-ramps and off-ramps directly between the fiat and crypto financial systems without the need for centralized intermediaries and trust brokers. This makes crypto assets and decentralized financial services more accessible to everyone.
+\textbf{Abstract}. \textit{tbDEX} is a protocol for discovering liquidity and exchanging assets (such as bitcoin, fiat money, or real world goods)\textcolor[HTML]{202124}{ }when the existence of \textit{social trust} is an intractable element of managing transaction risk. The \textit{tbDEX} protocol facilitates decentralized networks of exchange between assets by providing a framework for establishing social trust, utilizing \textit{decentralized identity} (DID) and \textit{verifiable credentials }(VCs) to establish the provenance of identity in the real-world. The protocol has no opinion on anonymity as a feature or consequence of transactions. Instead, it allows willing counterparties to negotiate and establish the minimum information acceptable for the exchange. Moreover, it provides the infrastructure necessary to create a ubiquity of on-ramps and off-ramps directly between the fiat and crypto financial systems without the need for centralized intermediaries and trust brokers. This makes crypto assets and decentralized financial services more accessible to everyone.
 
 \vspace{1\baselineskip}
 \section{Introduction}
@@ -95,7 +95,7 @@ DIDs are linked to DID Documents, a metadata file that contains two primary data
 \begin{itemize}
 	\item The system must be \textit{open}, \textit{public}, and \textit{permissionless}.
 
-	\item The system must be robustly censorship resistant and tamper evasive.
+	\item The system must be robustly censorship-resistant and tamper evasive.
 
 	\item The system must produce a record that is probabilistically finalized and independently, deterministically verifiable, even in the presence of segmentation, state withholding, and collusive node conditions.
 
@@ -109,13 +109,13 @@ DIDs are linked to DID Documents, a metadata file that contains two primary data
 Credentials are a part of our daily lives: driver's licenses are used to assert that we are capable of operating a vehicle; and diplomas are used to indicate the completion of degrees. In the realm of business, there exist signed receipts for payments, consumer reviews of products, and countless assertions made between individuals and non-governmental parties. While all these credentials provide benefits to us within apps, platform silos, and isolated interactions, there exists no uniform, standardized means to convey generalized digital credentials that are universally verifiable across domains, federation boundaries, and the Web at large.
 
 \vspace{1\baselineskip}
-The \href{https://www.w3.org/TR/vc-data-model/}{\uline{\textcolor[HTML]{1155CC}{Verifiable Credentials}}} specification provides a standard way to express credentials across the digital world in a way that is cryptographically secure, privacy respecting, and machine verifiable. The addition of zero-knowledge proof (ZKProof) [3] cryptography to VC constructions (e.g. SNARK credentials) [4] can further advance privacy and safety by preventing linkability across disclosures, reducing the amount of data disclosed, and in some cases removing the need to expose raw data values at all.
+The \href{https://www.w3.org/TR/vc-data-model/}{\uline{\textcolor[HTML]{1155CC}{Verifiable Credentials}}} specification provides a standard way to express credentials across the digital world in a way that is cryptographically secure, privacy-respecting, and machine verifiable. The addition of zero-knowledge proof (ZKProof) [3] cryptography to VC constructions (e.g. SNARK credentials) [4] can further advance privacy and safety by preventing linkability across disclosures, reducing the amount of data disclosed, and in some cases removing the need to expose raw data values at all.
 
 \vspace{1\baselineskip}
 \subsection{Identity Data Storage & Relay Nodes (Identity Hubs)}
 
 \vspace{1\baselineskip}
-Most digital activities between people, organizations, devices, and other entities require the exchange of messages and data. For entities to exchange messages and data for credential, app, or service flows, they need an interface through which to store, discover, and fetch data related to the flows and experiences they are participating in. Identity Hubs are a data storage and message relay mechanism entities can use to locate public or permissioned private data related to a given DID. Identity Hubs are a mesh-like datastore construction that enable an entity to operate multiple instances that sync to the same state across one another. This enables the owning entity to secure, manage, and transact their data with others\textcolor[HTML]{202124}{ }without reliance on location or provider-specific infrastructure, interfaces, or routing mechanisms.
+Most digital activities between people, organizations, devices, and other entities require the exchange of messages and data. For entities to exchange messages and data for credential, app, or service flows, they need an interface through which to store, discover, and fetch data related to the flows and experiences they are participating in. Identity Hubs are a data storage, and message relay mechanism entities can use to locate public or permissioned private data related to a given DID. Identity Hubs are a mesh-like datastore construction that enable an entity to operate multiple instances that sync to the same state across one another. This enables the owning entity to secure, manage, and transact their data with others\textcolor[HTML]{202124}{ }without reliance on location or provider-specific infrastructure, interfaces, or routing mechanisms.
 
 \vspace{1\baselineskip}
 Identity Hubs feature semantically encoded message and data interfaces that provide inferential APIs any party can interact with simply by knowing the semantic type of data they wish to exchange. A diverse set of interactions and flows can be modeled within these interfaces by externally codifying sets of message schemas and processing directives to form meta-protocols.
@@ -129,7 +129,7 @@ Identity Hubs feature semantically encoded message and data interfaces that prov
 Issuers are the source of VCs. Both organizations and individuals (by means of their wallet) can be an Issuer. For example, a reputable organization that already conducts KYC checks could begin issuing a KYC credential to individuals. A wallet could also issue an evaluation of a PFI that it had a negative experience with and circulate this amongst their network, effectively acting as verifiable reputational feedback. 
 
 \vspace{1\baselineskip}
-An incentive that may appeal to an Issuer is the potential to charge a PFI for the issuance of a VC used to provide a sense of credibility or legitimacy downstream. It’s worth noting that verifiers, which can be a PFI, a wallet, or an individual do not have to establish an explicit or direct relationship with an Issuer in order to receive or verify credentials issued by them. Instead, a verifier need only decide whether they are willing to make a business decision based on the level of trust assurance they have in the issuer of a given credential.
+An incentive that may appeal to an Issuer is the potential to charge a PFI for the issuance of a VC used to provide a sense of credibility or legitimacy downstream. It’s worth noting that verifiers, which can be a PFI, a wallet, or an individual, do not have to establish an explicit or direct relationship with an Issuer in order to receive or verify credentials issued by them. Instead, a verifier need only decide whether they are willing to make a business decision based on the level of trust assurance they have in the issuer of a given credential.
 
 \vspace{1\baselineskip}
 \subsection{Wallets}
@@ -154,7 +154,7 @@ Wallets act as agents for individuals or institutions by facilitating exchanges 
 
 \vspace{1\baselineskip}
 \end{itemize}
-Wallets developed using the \textit{tbDEX} protocol significantly simplify the user experience for their customers seeking to move assets between fiat and crypto. Individuals or organizations would no longer be required to first onboard through a separate, centralized exchange to procure crypto assets with fiat payment instruments, before transferring those crypto assets into the wallets. Individuals or organizations can also leverage the protocol to easily off-ramp back into fiat. 
+Wallets developed using the \textit{tbDEX} protocol significantly simplify the user experience for their customers seeking to move assets between fiat and crypto. Individuals or organizations would no longer be required to first onboard through a separate, centralized exchange to procure crypto-assets with fiat payment instruments, before transferring those crypto-assets into the wallets. Individuals or organizations can also leverage the protocol to easily off-ramp back into fiat. 
 
 \vspace{1\baselineskip}
 The protocol enables wallets to provide a streamlined customer experience with direct on- and off-ramps between the traditional and decentralized financial worlds. This means customers can use self-custody wallets without having to give up convenience in exchange for security or self-hosted options. 
@@ -476,7 +476,7 @@ This initial draft of the whitepaper is meant to establish a conceptual understa
 Future revisions of the whitepaper will address incomplete elements and currently unforeseen issues or challenges. 
 
 \vspace{1\baselineskip}
-After acceptance of the final protocol design, a \textit{tbDEX Protocol Specification }will be developed and published. Next, a standard-comformant, open source reference implementation and SDK for wallets will be developed, as well as a reference implementation of the PFI Node software. 
+After acceptance of the final protocol design, a \textit{tbDEX Protocol Specification }will be developed and published. Next, a standard-conformant, open-source reference implementation and SDK for wallets will be developed, as well as a reference implementation of the PFI Node software. 
 
 \vspace{1\baselineskip}
 \section{Feedback}
