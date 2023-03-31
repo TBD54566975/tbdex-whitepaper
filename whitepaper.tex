@@ -32,7 +32,7 @@
 
 
 \vspace{2\baselineskip}
-\textbf{Abstract}. \textit{tbDEX} is a protocol for discovering liquidity and exchanging assets (such as bitcoin, fiat money, or real world goods)\textcolor[HTML]{202124}{ }when the existence of \textit{social trust} is an intractable element of managing transaction risk. The \textit{tbDEX} protocol facilitates decentralized networks of exchange between assets by providing a framework for establishing social trust, utilizing \textit{decentralized identity} (DID) and \textit{verifiable credentials }(VCs) to establish the provenance of identity in the real world. The protocol has no opinion on anonymity as a feature or consequence of transactions. Instead, it allows willing counterparties to negotiate and establish the minimum information acceptable for the exchange. Moreover, it provides the infrastructure necessary to create a ubiquity of on-ramps and off-ramps directly between the fiat and crypto financial systems without the need for centralized intermediaries and trust brokers. This makes crypto assets and decentralized financial services more accessible to everyone.
+\textbf{Abstract}. \textit{tbDEX} is a protocol for discovering liquidity and exchanging assets (such as fiat money, real world goods, stablecoins or bitcoin)\textcolor[HTML]{202124}{ }when the existence of \textit{social trust} is an intractable element of managing transaction risk. The \textit{tbDEX} protocol facilitates decentralized networks of exchange between assets by providing a framework for establishing social trust, utilizing \textit{decentralized identity} (DID) and \textit{verifiable credentials }(VCs) to establish the provenance of identity in the real world. The protocol has no opinion on anonymity as a feature or consequence of transactions. Instead, it allows willing counterparties to negotiate and establish the minimum information acceptable for the exchange. Moreover, it provides the infrastructure necessary to create a ubiquity of on-ramps and off-ramps directly between the fiat and decentralized financial systems without the need for centralized intermediaries and trust brokers. This makes digital currencies and decentralized financial services more accessible to everyone.
 
 \vspace{1\baselineskip}
 \section{Introduction}
@@ -47,10 +47,10 @@ Globally, 1.7 billion adults lack access to the banking system, yet two-thirds o
 An open, decentralized financial system will enable all people to exchange value and transact with each other globally, securely, and at significantly lower cost and more inclusively than what traditional financial systems allow.  Beyond reinventing money itself, smart contracts also have the ability to fundamentally reshape how the financial infrastructure of the future can work.
 
 \vspace{1\baselineskip}
-\textit{tbDEX }was formed out of a desire to enable everyone to realize this vision of the future.  The current state of Bitcoin and other crypto technologies is still beyond the reach of everyday people. For instance, gaining access to your first cryptocurrency generally involves going through a centralized exchange. Accessing decentralized financial services then requires multiple asset transfers and transaction fees each step of the way. Aside from gatekeepers and cost, the complexity and sheer unintelligibility of this process today is a prohibitive barrier to entry for most. Important work is being done to overcome current drawbacks with layer two solutions, such as Lightning. But deficiencies remain. It is still prohibitively difficult for the average person, starting with traditional fiat-based payment instruments, to directly access on-ramps and off-ramps into and out of the decentralized financial system. We need a better bridge into this future. The \textit{tbDEX} protocol is directed at this problem.
+\textit{tbDEX }was formed out of a desire to enable everyone to realize this vision of the future.  The current state of Bitcoin and other decentralized financial systems is still beyond the reach of everyday people. For instance, gaining access to your first stablecoin generally involves going through a centralized exchange. Accessing decentralized financial services then requires multiple asset transfers and transaction fees each step of the way. Aside from gatekeepers and cost, the complexity and sheer unintelligibility of this process today is a prohibitive barrier to entry for most. Important work is being done to overcome current drawbacks with layer two solutions, such as Lightning. But deficiencies remain. It is still prohibitively difficult for the average person, starting with traditional fiat-based payment instruments, to directly access on-ramps and off-ramps into and out of the decentralized financial system. We need a better bridge into this future. The \textit{tbDEX} protocol is directed at this problem.
 
 \vspace{1\baselineskip}
-The protocol provides a framework for creating on-ramps and off-ramps from systems of fiat to cryptocurrency, without the need for going through centralized exchanges. The protocol affords for the secure exchange of identity and mechanisms for allowing participants to comply with laws and regulations. 
+The protocol provides a framework for creating on-ramps and off-ramps from systems of fiat to digital currencies, without the need for going through centralized exchanges. The protocol affords for the secure exchange of identity and mechanisms for allowing participants to comply with laws and regulations. 
 
 \vspace{1\baselineskip}
 At its core, the \textit{tbDEX} protocol facilitates the formation of networks of mutual trust between counterparties that are not centrally controlled; it allows participants to negotiate trust directly with each other (or rely on mutually trusted third-parties to vouch for counterparties), and price their exchanges to account for perceived risk and specific requirements. 
@@ -68,7 +68,7 @@ The \textit{tbDEX} protocol approaches trust differently than other decentralize
 The \textit{tbDEX} protocol borrows heavily, if not completely, from well-established models of decentralizing trust, such as the public key infrastructure (PKI) that is used for securing the internet today. 
 
 \vspace{1\baselineskip}
-Building on top of \href{https://www.w3.org/TR/did-core}{\uline{\textcolor[HTML]{1155CC}{Decentralized Identifiers (DID)}}} [2], this specification lays out a trust model in which trust is governed through disparate verifiers of trust; this is ultimately in the control of individuals, implementers of cryptocurrency wallets, and/or delegates of trust established by either group. 
+Building on top of \href{https://www.w3.org/TR/did-core}{\uline{\textcolor[HTML]{1155CC}{Decentralized Identifiers (DID)}}} [2], this specification lays out a trust model in which trust is governed through disparate verifiers of trust; this is ultimately in the control of individuals, implementers of digital currency wallets, and/or delegates of trust established by either group. 
 
 \vspace{1\baselineskip}
 The protocol itself does not rely on a federation to control permission or access to the network. There is no governance token. In its most abstract form, it is an extensible messaging protocol with the ability to form distributed trust relationships as a core design facet. The protocol itself has no opinion on what an optimal trust relationship between an individual wallet and a participating financial institution (PFI) should look like. 
@@ -154,7 +154,7 @@ Wallets act as agents for individuals or institutions by facilitating exchanges 
 
 \vspace{1\baselineskip}
 \end{itemize}
-Wallets developed using the \textit{tbDEX} protocol significantly simplify the user experience for their customers seeking to move assets between fiat and crypto. Individuals or organizations would no longer be required to first onboard through a separate, centralized exchange to procure crypto assets with fiat payment instruments, before transferring those crypto assets into the wallets. Individuals or organizations can also leverage the protocol to easily off-ramp back into fiat. 
+Wallets developed using the \textit{tbDEX} protocol significantly simplify the user experience for their customers seeking to move assets between fiat and crypto. Individuals or organizations would no longer be required to first onboard through a separate, centralized exchange to procure digital currency assets with fiat payment instruments, before transferring those digital currency assets into the wallets. Individuals or organizations can also leverage the protocol to easily off-ramp back into fiat. 
 
 \vspace{1\baselineskip}
 The protocol enables wallets to provide a streamlined customer experience with direct on- and off-ramps between the traditional and decentralized financial worlds. This means customers can use self-custody wallets without having to give up convenience in exchange for security or self-hosted options. 
@@ -174,7 +174,7 @@ The \textit{tbDEX }protocol does not enforce any specific requirements upon wall
 \subsection{Participating Financial Institutions (PFIs)}
 
 \vspace{1\baselineskip}
-Participating Financial Institutions (PFIs) are entities that offer liquidity services on the \textit{tbDEX }network. \textit{tbDEX }is permissionless, meaning any PFI can run a node on the network without third-party approval by any individual, federation, or organization.  Each PFI will be identified via DIDs and VCs. PFIs can be, but are not limited to, fintech companies, regional banks, large institutional banks, or other financial institutions; PFIs have access to fiat payment systems and the ability to facilitate fiat payments in exchange for tokenized cryptocurrency assets or vice versa. In theory, a PFI could accept or produce cash or checks as a mechanism for effectuating fiat settlement. However, for the purposes of this whitepaper we assume fiat transactions happen via online, digital payments.
+Participating Financial Institutions (PFIs) are entities that offer liquidity services on the \textit{tbDEX }network. \textit{tbDEX }is permissionless, meaning any PFI can run a node on the network without third-party approval by any individual, federation, or organization.  Each PFI will be identified via DIDs and VCs. PFIs can be, but are not limited to, fintech companies, regional banks, large institutional banks, or other financial institutions; PFIs have access to fiat payment systems and the ability to facilitate fiat payments in exchange for digital currency assets or vice versa. In theory, a PFI could accept or produce cash or checks as a mechanism for effectuating fiat settlement. However, for the purposes of this whitepaper we assume fiat transactions happen via online, digital payments.
 
 \vspace{1\baselineskip}
 While PFIs may be subject to varying rules and regulations for fiat currency payments, depending on their specific jurisdiction, they likely need to collect certain personally identifiable information (PII) from the owners of wallets in order to meet regulatory requirements, such as satisfying anti-money laundering (AML) programs, countering terrorist financing, and not violating sanctions.  The \textit{tbDEX }protocol does not include any PII in the ASK itself, only information on the type of PII that will be provided should the PFI choose to accept the ASK and the wallet commits to providing the necessary information. 
@@ -183,7 +183,7 @@ While PFIs may be subject to varying rules and regulations for fiat currency pay
 When a PFI receives an ASK from a wallet, it will decide if it wants to offer a bid based on the details of the ASK. PFIs are not required to support all possible schemes and asks.  For example, some PFIs may accept credit cards while others may not.  The \textit{tbDEX }protocol may carry information that enables PFIs to decide whether they seek to bid for the wallet’s business, and if so, what VCs to ask of wallets.  The protocol will also carry the required regulatory-clearing information required by PFIs to conduct their AML and KYC checks before they provision liquidity to the wallet owner.\ \ However, the necessary information may vary based on the jurisdiction. 
 
 \vspace{1\baselineskip}
-To participate in the network, PFIs will run nodes that facilitate the reception of ASKs and transmission of BIDs. Conceptually, PFI nodes are similar to wallets and will rely on the same underlying modules and libraries. The \textit{tbDEX }protocol does not execute fiat or cryptocurrency transactions. This is provided by the PFI and made discoverable through the PFIs DID.  
+To participate in the network, PFIs will run nodes that facilitate the reception of ASKs and transmission of BIDs. Conceptually, PFI nodes are similar to wallets and will rely on the same underlying modules and libraries. The \textit{tbDEX }protocol does not execute fiat or digital currency transactions. This is provided by the PFI and made discoverable through the PFIs DID.  
 
 \vspace{1\baselineskip}
 \section{Protocol}
@@ -249,14 +249,14 @@ The following are necessary preconditions for the protocol flows described below
 
 \vspace{1\baselineskip}
 \end{itemize}
-Below are examples of on-ramp (fiat $\rightarrow$ crypto) and off-ramp (crypto $\rightarrow$ fiat) scenarios, using Alice as a placeholder to represent any individual using the protocol. For the sake of this example, we’ll be using USD, though the protocol is not limited to just USD.
+Below are examples of on-ramp (fiat $\rightarrow$ crypto) and off-ramp (digital currency $\rightarrow$ fiat) scenarios, using Alice as a placeholder to represent any individual using the protocol. For the sake of this example, we’ll be using USD, though the protocol is not limited to just USD.
 
 \subsubsection{On-Ramp Example}
 
 \begin{itemize}
 	\item Alice’s wallet resolves and caches the current set of keys and Identity Hub endpoints for the DIDs of known and discovered PFIs. This is a periodic activity the wallet repeats as needed.
 
-	\item Through the wallet user interface, Alice initiates a flow to request cryptocurrency \textit{XYZ} in exchange for 100.00 USD.
+	\item Through the wallet user interface, Alice initiates a flow to request digital currency \textit{XYZ} in exchange for 100.00 USD.
 
 	\item The wallet generates a semantic message that reflects an \textit{ASK}, encoded with the parameters of Alice’s request.  
 
@@ -270,11 +270,11 @@ Below are examples of on-ramp (fiat $\rightarrow$ crypto) and off-ramp (crypto $
 
 	\item Alice accepts the \textit{BID} by signing it and sending it back to the PFI.
 
-	\item The PFI publishes a smart contract on a blockchain and funds it (to establish proof of ability to settle) with the agreed-upon amount of \textit{XYZ} cryptocurrency and sends the transaction address to Alice.
+	\item The PFI publishes a smart contract on a blockchain and funds it (to establish proof of ability to settle) with the agreed-upon amount of \textit{XYZ} digital currency and sends the transaction address to Alice.
 
 	\item Alice’s wallet queries the contract to ensure the agreed-upon amount is present. Alice’s wallet then fetches the accepted means of fiat payment from the PFI’s hub. (The means of fiat payment will be exposed as individual services.) Alice selects her preferred means of payment from the ones available. Alice’s wallet facilitates payment through the service associated with the selected means of payment.
 
-	\item Once the PFI is happy with the state of the fiat payment (this can be when the payment settles, or it can be sooner if the PFI decides to take on more risk), they execute the smart contract to release the crypto to Alice’s wallet address.
+	\item Once the PFI is happy with the state of the fiat payment (this can be when the payment settles, or it can be sooner if the PFI decides to take on more risk), they execute the smart contract to release the digital currency to Alice’s wallet address.
 
 \vspace{1\baselineskip}
 \end{itemize}
@@ -295,7 +295,7 @@ Below are examples of on-ramp (fiat $\rightarrow$ crypto) and off-ramp (crypto $
 \begin{enumerate}
 	\item Alice’s wallet resolves and caches the current set of keys and Identity Hub endpoints for the DIDs of known and discovered PFIs. This is a periodic activity the wallet repeats as needed.
 
-	\item Through the wallet user interface, Alice initiates a flow to request fiat currency (in this case USD) in exchange for 100 units of cryptocurrency \textit{XYZ}.
+	\item Through the wallet user interface, Alice initiates a flow to request fiat currency (in this case USD) in exchange for 100 units of digital currency \textit{XYZ}.
 
 	\item Alice’s wallet generates a semantic message that reflects an \textit{ASK}, encoded with the parameters of Alice’s request.  
 
@@ -309,7 +309,7 @@ Below are examples of on-ramp (fiat $\rightarrow$ crypto) and off-ramp (crypto $
 
 	\item Alice accepts the BID by signing it and sending it back to the PFI.
 
-	\item The wallet creates a smart contract and funds it with 100 units of cryptocurrency XYZ and sends the contract address to the PFI.
+	\item The wallet creates a smart contract and funds it with 100 units of digital currency XYZ and sends the contract address to the PFI.
 
 	\item The PFI queries the smart contract to ensure that the agreed upon amount of \textit{XYZ} is present and then initiates a transaction to pull the funds into their wallet.
 
@@ -317,10 +317,10 @@ Below are examples of on-ramp (fiat $\rightarrow$ crypto) and off-ramp (crypto $
 
 \vspace{1\baselineskip}
 \end{enumerate}
-One motivation behind introducing a smart contract is to enable the cryptocurrency held in the smart contract to be automatically released back to Alice after a certain amount of time has elapsed, should the PFI go dark and not fulfill its obligations.
+One motivation behind introducing a smart contract is to enable the digital currency held in the smart contract to be automatically released back to Alice after a certain amount of time has elapsed, should the PFI go dark and not fulfill its obligations.
 
 \vspace{1\baselineskip}
-The actual value exchange in the last two steps of the off-ramp example puts more risk on Alice, as the PFI can pull Alice’s crypto before initiating a push of fiat into the destination provided by Alice. \textcolor[HTML]{202124}{Ideally, there would be a way to guarantee that the PFI will send the fiat before they receive the crypto.} In future implementations, PFIs and wallets can rely on bank monitoring services and act as oracles within the smart contract to monitor the individual's bank account and trigger crypto funds to be released to the PFI only \textit{after} they see the fiat push is initiated\textcolor[HTML]{3C4043}{.}
+The actual value exchange in the last two steps of the off-ramp example puts more risk on Alice, as the PFI can pull Alice’s digital currency before initiating a push of fiat into the destination provided by Alice. \textcolor[HTML]{202124}{Ideally, there would be a way to guarantee that the PFI will send the fiat before they receive the crypto.} In future implementations, PFIs and wallets can rely on bank monitoring services and act as oracles within the smart contract to monitor the individual's bank account and trigger digital currency funds to be released to the PFI only \textit{after} they see the fiat push is initiated\textcolor[HTML]{3C4043}{.}
 
 \vspace{9\baselineskip}
 \begin{center}
@@ -345,7 +345,7 @@ The DID associated with the owner of the wallet (either an individual or an inst
 
 \subparagraph{Desired Asset Type}
 
-The type of asset being requested (e.g., TOKEN-USDC, TOKEN-BTC, TOKEN-MMXN, FIAT-USD, FIAT-EUR, etc.), where assets prefixed by TOKEN are tokenized crypto assets, and assets prefixed by FIAT are fiat currencies.\textit{ }
+The type of asset being requested (e.g., TOKEN-USDC, TOKEN-BTC, TOKEN-MMXN, FIAT-USD, FIAT-EUR, etc.), where assets prefixed by TOKEN are digital currency assets, and assets prefixed by FIAT are fiat currencies.\textit{ }
 
 \subparagraph{Desired Asset Amount}
 
@@ -418,14 +418,14 @@ Regulated PFIs are subject to legally-imposed requirements and obligations, such
 
 \subsubsection{Financial Crimes}
 
-Financial institutions manage these risks by building out robust AML and anti-terrorist compliance programs to monitor for illicit activity. In the cryptocurrency space, many PFIs have taken the additional step of leveraging blockchain monitoring and cross-chain analytics solutions in order to decide which individuals or wallets to engage with and which transactions to facilitate.
+Financial institutions manage these risks by building out robust AML and anti-terrorist compliance programs to monitor for illicit activity. In the digital currency space, many PFIs have taken the additional step of leveraging blockchain monitoring and cross-chain analytics solutions in order to decide which individuals or wallets to engage with and which transactions to facilitate.
 
 \vspace{1\baselineskip}
 In concordance with implementing the tbDEX protocol, the use of blockchain analytics solutions and intelligence can assist PFIs in screening, scoring, and monitoring individual wallets and transactions in order to evaluate transactions based on the PFI’s risk criterion and regulatory obligations. Beyond detecting and assessing the risk of financial crime, blockchain analytics solutions can also be employed to provide risk scores based on prior transactions as part of a post-transaction surveillance scheme to detect risk with previously encountered entities. 
 
 \subsubsection{Chargebacks / Fraud}
 
-A chargeback is a credit or debit card payment that is reversed by a bank in favor of the cardholder after the payment has been processed and settled. Chargebacks happen when a customer requests banks to return their funds for a variety of reasons, the most common being non-delivery of goods or services, or unauthorized use of payment cards. In the context of the tbDEX protocol, chargebacks present an added challenge because the credit or debit card is used to purchase cryptocurrency that can then be deposited into a self-custody wallet, where assets cannot be recovered by PFIs. In this example, there’s asymmetry between a reversible payment instrument in the fiat world versus a non-reversible or recoverable transaction in the cryptocurrency world. Figuring out how to effectively manage fraud and chargeback risks is a significant area for further development that we will seek to address in future versions of the whitepaper.
+A chargeback is a credit or debit card payment that is reversed by a bank in favor of the cardholder after the payment has been processed and settled. Chargebacks happen when a customer requests banks to return their funds for a variety of reasons, the most common being non-delivery of goods or services, or unauthorized use of payment cards. In the context of the tbDEX protocol, chargebacks present an added challenge because the credit or debit card is used to purchase digital currency that can then be deposited into a self-custody wallet, where assets cannot be recovered by PFIs. In this example, there’s asymmetry between a reversible payment instrument in the fiat world versus a non-reversible or recoverable transaction in the digital currency world. Figuring out how to effectively manage fraud and chargeback risks is a significant area for further development that we will seek to address in future versions of the whitepaper.
 
 \subsubsection{Underwriting / Defaults}
 
@@ -435,7 +435,7 @@ Another consideration for PFIs is whether the wallet owner is ``good" for the fu
 In the context of exchanges happening via the \textit{tbDEX} protocol, PFIs are subject to credit risk so long as it is possible for balances to go negative because the underlying funds that were promised leave the designated account before the transaction settles. This is especially true for PFIs who seek to offer expedited transactions to support a near real-time user experience by sending wallets stablecoins after the ACH transaction is initiated, but before it is settled. 
 
 \vspace{1\baselineskip}
-While this is the reason banks and other financial institutions underwrite potential customers in the traditional financial world (and refuse to bank customers they consider to be a credit risk), there are other reasons that defaults can happen, including the transaction itself failing after the cryptocurrency has been sent to a self-custody wallet. While it is possible for PFIs to adjust the price of their bids based on their perceived risk of defaults or chargebacks, these scenarios are ones to address in further detail in future versions of the whitepaper. 
+While this is the reason banks and other financial institutions underwrite potential customers in the traditional financial world (and refuse to bank customers they consider to be a credit risk), there are other reasons that defaults can happen, including the transaction itself failing after the digital currency has been sent to a self-custody wallet. While it is possible for PFIs to adjust the price of their bids based on their perceived risk of defaults or chargebacks, these scenarios are ones to address in further detail in future versions of the whitepaper. 
 
 \vspace{1\baselineskip}
 \subsection{Risks & Considerations for Wallets}
@@ -458,7 +458,7 @@ The Bitcoin whitepaper [5] outlined a vision for a digitally native currency and
 When the digital realm interacts with the physical realm, the trustless guarantees do not cross the divide. While it is true that, say, a bitcoin transaction between wallets requires no trusted third party or intermediary, it is also true that in payments for goods and services, counterparty risk still exists. With bitcoin, the payee may receive funds without the possibility of the payer defaulting on their financial obligation, but the payee may still default on the transaction through non-delivery of goods or services. A physical pair of socks cannot be atomically swapped with bitcoin on a DEX. In fact, it is impossible and unreasonable to expect such a transaction can be conducted purely anonymously, without the counterparties having some external trust relationship. In the average case, the payee needs a physical shipping address, while the payer would seek some signal to trust that the payee is a legitimate business. 
 
 \vspace{1\baselineskip}
-The exchange of fiat and cryptocurrency suffers from the same problem. Can the counterparty be trusted to deliver fiat in exchange for cryptocurrency? What are the consequences if they do not? 
+The exchange of fiat and digital currency suffers from the same problem. Can the counterparty be trusted to deliver fiat in exchange for digital currency? What are the consequences if they do not? 
 
 \vspace{1\baselineskip}
 The \textit{tbDEX} protocol aims to utilize systems of decentralized identity with VCs to create markets of trust, through mutually chosen third-parties. This may be perceived as seeking to undermine anonymity or ``deanonymize" transactions. But we must also recognize that for the aforementioned reasons, anonymity for transactions of goods and services comes with a cost: unbounded counterparty risk. 
