@@ -154,7 +154,7 @@ Wallets act as agents for individuals or institutions by facilitating exchanges 
 
 \vspace{1\baselineskip}
 \end{itemize}
-Wallets developed using the \textit{tbDEX} protocol significantly simplify the user experience for their customers seeking to move assets between fiat and crypto. Individuals or organizations would no longer be required to first onboard through a separate, centralized exchange to procure digital currency assets with fiat payment instruments, before transferring those digital currency assets into the wallets. Individuals or organizations can also leverage the protocol to easily off-ramp back into fiat. 
+Wallets developed using the \textit{tbDEX} protocol significantly simplify the user experience for their customers seeking to move assets between fiat and digital currencies. Individuals or organizations would no longer be required to first onboard through a separate, centralized exchange to procure digital currency assets with fiat payment instruments, before transferring those digital currency assets into the wallets. Individuals or organizations can also leverage the protocol to easily off-ramp back into fiat. 
 
 \vspace{1\baselineskip}
 The protocol enables wallets to provide a streamlined customer experience with direct on- and off-ramps between the traditional and decentralized financial worlds. This means customers can use self-custody wallets without having to give up convenience in exchange for security or self-hosted options. 
@@ -249,7 +249,7 @@ The following are necessary preconditions for the protocol flows described below
 
 \vspace{1\baselineskip}
 \end{itemize}
-Below are examples of on-ramp (fiat $\rightarrow$ crypto) and off-ramp (digital currency $\rightarrow$ fiat) scenarios, using Alice as a placeholder to represent any individual using the protocol. For the sake of this example, we’ll be using USD, though the protocol is not limited to just USD.
+Below are examples of on-ramp (fiat $\rightarrow$ digital currency) and off-ramp (digital currency $\rightarrow$ fiat) scenarios, using Alice as a placeholder to represent any individual using the protocol. For the sake of this example, we’ll be using USD, though the protocol is not limited to just USD.
 
 \subsubsection{On-Ramp Example}
 
@@ -320,7 +320,7 @@ Below are examples of on-ramp (fiat $\rightarrow$ crypto) and off-ramp (digital 
 One motivation behind introducing a smart contract is to enable the digital currency held in the smart contract to be automatically released back to Alice after a certain amount of time has elapsed, should the PFI go dark and not fulfill its obligations.
 
 \vspace{1\baselineskip}
-The actual value exchange in the last two steps of the off-ramp example puts more risk on Alice, as the PFI can pull Alice’s digital currency before initiating a push of fiat into the destination provided by Alice. \textcolor[HTML]{202124}{Ideally, there would be a way to guarantee that the PFI will send the fiat before they receive the crypto.} In future implementations, PFIs and wallets can rely on bank monitoring services and act as oracles within the smart contract to monitor the individual's bank account and trigger digital currency funds to be released to the PFI only \textit{after} they see the fiat push is initiated\textcolor[HTML]{3C4043}{.}
+The actual value exchange in the last two steps of the off-ramp example puts more risk on Alice, as the PFI can pull Alice’s digital currency before initiating a push of fiat into the destination provided by Alice. \textcolor[HTML]{202124}{Ideally, there would be a way to guarantee that the PFI will send the fiat before they receive the digital currency.} In future implementations, PFIs and wallets can rely on bank monitoring services and act as oracles within the smart contract to monitor the individual's bank account and trigger digital currency funds to be released to the PFI only \textit{after} they see the fiat push is initiated\textcolor[HTML]{3C4043}{.}
 
 \vspace{9\baselineskip}
 \begin{center}
