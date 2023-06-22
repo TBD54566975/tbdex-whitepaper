@@ -21,7 +21,7 @@
 \begin{document}
 
 \begin{center}
-{\LARGE \textbf{\textit{tbDEX}: A Liquidity Protocol v0.1}}
+{\LARGE \textbf{\textit{tbDEX}: A Liquidity Protocol v0.2}}
 \end{center}
 
 
@@ -87,7 +87,7 @@ DIDs are linked to DID Documents, a metadata file that contains two primary data
 \begin{enumerate}
 	\item \textit{Cryptographic material} the DID owner can use to prove control over the associated DID (i.e. public keys and digital signatures) 
 
-	\item \textit{Routing endpoints} for locations where one may be able to contact or exchange data with the DID owner (e.g. Identity Hub personal data storage and relay nodes) 
+	\item \textit{Routing endpoints} for locations where one may be able to contact or exchange data with the DID owner (e.g. DWN personal data storage and relay nodes)
 
 \end{enumerate}
  \\ DID Methods may be implemented in very different ways, but the following are essential attributes of exemplar Methods (e.g. ION): \\ 
@@ -112,13 +112,17 @@ Credentials are a part of our daily lives: driver's licenses are used to assert 
 The \href{https://www.w3.org/TR/vc-data-model/}{\uline{\textcolor[HTML]{1155CC}{Verifiable Credentials}}} specification provides a standard way to express credentials across the digital world in a way that is cryptographically secure, privacy respecting, and machine verifiable. The addition of zero-knowledge proof (ZKProof) [3] cryptography to VC constructions (e.g. SNARK credentials) [4] can further advance privacy and safety by preventing linkability across disclosures, reducing the amount of data disclosed, and in some cases removing the need to expose raw data values at all.
 
 \vspace{1\baselineskip}
-\subsection{Identity Data Storage & Relay Nodes (Identity Hubs)}
+\subsection{Decentralized Web Nodes}
 
 \vspace{1\baselineskip}
-Most digital activities between people, organizations, devices, and other entities require the exchange of messages and data. For entities to exchange messages and data for credential, app, or service flows, they need an interface through which to store, discover, and fetch data related to the flows and experiences they are participating in. Identity Hubs are a data storage and message relay mechanism entities can use to locate public or permissioned private data related to a given DID. Identity Hubs are a mesh-like datastore construction that enable an entity to operate multiple instances that sync to the same state across one another. This enables the owning entity to secure, manage, and transact their data with others\textcolor[HTML]{202124}{ }without reliance on location or provider-specific infrastructure, interfaces, or routing mechanisms.
+Most digital activities between people, organizations, devices, and other entities require the exchange of messages and data. For entities to exchange messages and data for credential, app, or service flows, they need an interface through which to store, discover, and fetch data related to the flows and experiences they are participating in. Decentralized Web Nodes are a data storage and messaging mechanism entities can use to locate public or permissioned private data related to a given DID. Decentralized Web Nodes are a mesh-like datastore construction that enable an entity to operate multiple instances that sync to the same state across one another. This enables the owning entity to secure, manage, and transact their data with others\textcolor[HTML]{202124}{ }without reliance on location or provider-specific infrastructure, interfaces, or routing mechanisms.
+
+The specification will be an open specification incubated at
+\href{https://identity.foundation/decentralized-web-node/spec/}{\uline{\textcolor[HTML]{1155CC}{Decentralized
+Identity Foundation (DIF)}}}.
 
 \vspace{1\baselineskip}
-Identity Hubs feature semantically encoded message and data interfaces that provide inferential APIs any party can interact with simply by knowing the semantic type of data they wish to exchange. A diverse set of interactions and flows can be modeled within these interfaces by externally codifying sets of message schemas and processing directives to form meta-protocols.
+Decentralized Web Nodes feature semantically encoded message and data interfaces that provide inferential APIs any party can interact with simply by knowing the semantic type of data they wish to exchange. A diverse set of interactions and flows can be modeled within these interfaces by externally codifying sets of message schemas and processing directives to form meta-protocols.
 
 \section{Participants}
 
@@ -200,16 +204,17 @@ The core messaging protocol is divided into several communications layers. The f
 \subsection{Point-to-Point Messaging Scheme}
 
 \vspace{1\baselineskip}
-The messages exchanged between wallet owners and PFIs that are passed between the Identity Hubs of the participants contain semantically defined objects adherent to standard schemas. These message objects define all paths of the ASK / BID / Settlement flow and contain the necessary data for counterparties to evaluate requests, verify credentials, and execute value exchanges.
+The messages exchanged between wallet owners and PFIs that are passed between
+the Decentralized Web Nodes of the participants contain semantically defined objects adherent to standard schemas. These message objects define all paths of the ASK / BID / Settlement flow and contain the necessary data for counterparties to evaluate requests, verify credentials, and execute value exchanges.
 
 \vspace{1\baselineskip}
-Messages are JSON objects, signed by the sending party to the receiving party for each leg of an exchange, and may be encrypted depending on the flow or content they contain. Hooks are present that allow a message handler service to receive the messages as they arrive at an Identity Hub and process them in accordance with the semantics and rule set the protocol defines for a given message type.
+Messages are JSON objects, signed by the sending party to the receiving party for each leg of an exchange, and may be encrypted depending on the flow or content they contain. Hooks are present that allow a message handler service to receive the messages as they arrive at an DWN and process them in accordance with the semantics and rule set the protocol defines for a given message type.
 
 \vspace{1\baselineskip}
 \subsection{PFI Discovery}
 
 \vspace{1\baselineskip}
-For wallets to initiate and transact value exchanges with PFIs, they must be aware of the PFI DIDs they wish to include in their pool of potential counterparties. Awareness of PFI DIDs enables wallets to resolve the current key set and Identity Hub routing endpoints associated with a given DID. We envision several means of gaining awareness of PFI DIDs:
+For wallets to initiate and transact value exchanges with PFIs, they must be aware of the PFI DIDs they wish to include in their pool of potential counterparties. Awareness of PFI DIDs enables wallets to resolve the current key set and DWN routing endpoints associated with a given DID. We envision several means of gaining awareness of PFI DIDs:
 
 \vspace{1\baselineskip}
 {\Large \textcolor[HTML]{434343}{Individually-Curated Lists}}
@@ -226,7 +231,7 @@ A participant in the ecosystem may locate a trusted DID list from another entity
 
 \paragraph{DID Directory Crawling}
 
-Some DID implementations provide mechanisms for iterating the DID directory space within them. For implementations that offer this capability, participants may choose to crawl the wider DID directory space and request trust-establishing credentials and / or trusted DID lists from the Identity Hubs of entities that choose to respond.
+Some DID implementations provide mechanisms for iterating the DID directory space within them. For implementations that offer this capability, participants may choose to crawl the wider DID directory space and request trust-establishing credentials and / or trusted DID lists from the Decentralized Web Nodes of entities that choose to respond.
 
 \vspace{1\baselineskip}
 It is ultimately up to the wallet to determine which DID list and PFIs to trust.
@@ -241,7 +246,7 @@ The following are necessary preconditions for the protocol flows described below
 \begin{itemize}
 	\item Wallet owners and PFIs possess DIDs. 
 
-	\item Wallet owners and PFIs have Identity Hubs linked to their DIDs.
+	\item Wallet owners and PFIs have Decentralized Web Nodes linked to their DIDs.
 
 	\item Wallet owners, via their wallets, are able to locate PFIs via curated awareness of their DIDs (wallet-generated lists) and / or dynamic crawling and discovery.
 
@@ -254,13 +259,13 @@ Below are examples of on-ramp (fiat $\rightarrow$ digital currency) and off-ramp
 \subsubsection{On-Ramp Example}
 
 \begin{itemize}
-	\item Alice’s wallet resolves and caches the current set of keys and Identity Hub endpoints for the DIDs of known and discovered PFIs. This is a periodic activity the wallet repeats as needed.
+	\item Alice’s wallet resolves and caches the current set of keys and DWN endpoints for the DIDs of known and discovered PFIs. This is a periodic activity the wallet repeats as needed.
 
 	\item Through the wallet user interface, Alice initiates a flow to request digital currency \textit{XYZ} in exchange for 100.00 USD.
 
 	\item The wallet generates a semantic message that reflects an \textit{ASK}, encoded with the parameters of Alice’s request.  
 
-	\item The wallet sends the \textit{ASK} message to the Identity Hubs of each PFI it desires to include as a potential fulfillment counterparty.
+	\item The wallet sends the \textit{ASK} message to the Decentralized Web Nodes of each PFI it desires to include as a potential fulfillment counterparty.
 
 	\item An interested PFI responds to the \textit{ASK} it receives with a list of \textit{BID}s.\textit{ Note: The PFI has the liberty to choose which credential types they require for a given BID, and it is possible for the PFI to offer a BID with no credential requirements. Given that each additional VC presumably reduces the risk taken by the PFI, it is likely that PFIs will provide better rates or speeds for BIDs with higher levels of credential requirements. }
 
@@ -293,13 +298,13 @@ Below are examples of on-ramp (fiat $\rightarrow$ digital currency) and off-ramp
 \subsubsection{Off-Ramp Example}
 
 \begin{enumerate}
-	\item Alice’s wallet resolves and caches the current set of keys and Identity Hub endpoints for the DIDs of known and discovered PFIs. This is a periodic activity the wallet repeats as needed.
+	\item Alice’s wallet resolves and caches the current set of keys and DWN endpoints for the DIDs of known and discovered PFIs. This is a periodic activity the wallet repeats as needed.
 
 	\item Through the wallet user interface, Alice initiates a flow to request fiat currency (in this case USD) in exchange for 100 units of digital currency \textit{XYZ}.
 
 	\item Alice’s wallet generates a semantic message that reflects an \textit{ASK}, encoded with the parameters of Alice’s request.  
 
-	\item Alice’s wallet sends the \textit{ASK} message to the Identity Hubs of each PFI it desires to include as a potential fulfillment counterparty.
+	\item Alice’s wallet sends the \textit{ASK} message to the Decentralized Web Nodes of each PFI it desires to include as a potential fulfillment counterparty.
 
 	\item An interested PFI responds to the \textit{ASK} it receives with a list of \textit{BID}s. 
 
@@ -405,7 +410,7 @@ Wallets and PFIs negotiate trust directly between each other, and may rely on mu
 \vspace{1\baselineskip}
 For instance, the implementer of a wallet may elect to assemble and publish \textit{lists expressing positive or negative sentiment} about the DIDs of PFI\textit{s }they are including or excluding from use within their offerings. This is similar to how Web browser vendors include pre-loaded Certificate Authority (CAs) lists to establish a trust basis for Transport Layer Security (TLS), which is used to secure data transfers over the Web. 
 
- \\ The ability to revoke or modify a DID’s standing in a \textit{sentiment list} is an advisable element for any such scheme, similar to certificate revocation with CAs. This could be robustly implemented using VCs and Identity Hub publication mechanisms. The exact design of such a scheme is beyond the scope of this whitepaper, but it is an important component we aim to solve as we operationalize this protocol.
+ \\ The ability to revoke or modify a DID’s standing in a \textit{sentiment list} is an advisable element for any such scheme, similar to certificate revocation with CAs. This could be robustly implemented using VCs and DWN publication mechanisms. The exact design of such a scheme is beyond the scope of this whitepaper, but it is an important component we aim to solve as we operationalize this protocol.
 
 \vspace{1\baselineskip}
 \section{Risks & Further Considerations}
