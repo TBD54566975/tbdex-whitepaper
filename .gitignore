@@ -2,3 +2,5 @@
 whitepaper.out
 whitepaper.aux
 whitepaper.log
+build
+.auctex-auto/
