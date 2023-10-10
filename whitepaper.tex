@@ -275,11 +275,8 @@ Below are examples of on-ramp (fiat $\rightarrow$ digital currency) and off-ramp
 
 	\item Alice accepts the \textit{BID} by signing it and sending it back to the PFI.
 
-	\item The PFI publishes a smart contract on a blockchain and funds it (to establish proof of ability to settle) with the agreed-upon amount of \textit{XYZ} digital currency and sends the transaction address to Alice.
-
 	\item Alice’s wallet queries the contract to ensure the agreed-upon amount is present. Alice’s wallet then fetches the accepted means of fiat payment from the PFI’s hub. (The means of fiat payment will be exposed as individual services.) Alice selects her preferred means of payment from the ones available. Alice’s wallet facilitates payment through the service associated with the selected means of payment.
 
-	\item Once the PFI is happy with the state of the fiat payment (this can be when the payment settles, or it can be sooner if the PFI decides to take on more risk), they execute the smart contract to release the digital currency to Alice’s wallet address.
 
 \vspace{1\baselineskip}
 \end{itemize}
@@ -314,18 +311,14 @@ Below are examples of on-ramp (fiat $\rightarrow$ digital currency) and off-ramp
 
 	\item Alice accepts the BID by signing it and sending it back to the PFI.
 
-	\item The wallet creates a smart contract and funds it with 100 units of digital currency XYZ and sends the contract address to the PFI.
-
-	\item The PFI queries the smart contract to ensure that the agreed upon amount of \textit{XYZ} is present and then initiates a transaction to pull the funds into their wallet.
 
 	\item The PFI pushes the agreed upon amount of fiat into the destination provided by Alice.
 
 \vspace{1\baselineskip}
 \end{enumerate}
-One motivation behind introducing a smart contract is to enable the digital currency held in the smart contract to be automatically released back to Alice after a certain amount of time has elapsed, should the PFI go dark and not fulfill its obligations.
 
 \vspace{1\baselineskip}
-The actual value exchange in the last two steps of the off-ramp example puts more risk on Alice, as the PFI can pull Alice’s digital currency before initiating a push of fiat into the destination provided by Alice. \textcolor[HTML]{202124}{Ideally, there would be a way to guarantee that the PFI will send the fiat before they receive the digital currency.} In future implementations, PFIs and wallets can rely on bank monitoring services and act as oracles within the smart contract to monitor the individual's bank account and trigger digital currency funds to be released to the PFI only \textit{after} they see the fiat push is initiated\textcolor[HTML]{3C4043}{.}
+The actual value exchange in the last two steps of the off-ramp example puts more risk on Alice, as the PFI can pull Alice’s digital currency before initiating a push of fiat into the destination provided by Alice. \textcolor[HTML]{202124}
 
 \vspace{9\baselineskip}
 \begin{center}
@@ -451,7 +444,7 @@ A serious potential attack that could be staged against wallets would be a PFI n
 
 \subsubsection{Settlement Default / Non-Delivery of Funds}
 
-After entering into a contract, it is also possible that a PFI may fail to deliver funds for reasons unrelated to fraud or malfeasance. This is an area that will be addressed in future revisions of the whitepaper. Directionally, the use of verified identities for PFIs creates the opportunity for out-of-band dispute processes using legal or other means. This scenario may also be addressed via publicly referenceable information on defaults using smart contract-based escrow settlement, or a separate watchtower protocol. \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+After entering into a contract, it is also possible that a PFI may fail to deliver funds for reasons unrelated to fraud or malfeasance. This is an area that may be addressed in future revisions of the whitepaper. Directionally, the use of verified identities for PFIs creates the opportunity for out-of-band dispute processes using legal or other means. \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
 
 \vspace{1\baselineskip}
 \section{Note on Anonymity and Censorship Resistance}
